@@ -1,0 +1,391 @@
+/* <================ Utils ===================> */
+.my-bg-dark {
+  background: black;
+}
+.j-underline {
+  width: 100px;
+  margin: auto;
+  height: 5px;
+}
+.j-bg-white {
+  background-color: #f5f5f5;
+}
+/* <================ End utils ===================> */
+
+.box-shadow,
+.card-blog,
+.work-box,
+.service-box,
+.paralax-mf {
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+.overlay-mf {
+  background-color: #0078ff;
+}
+
+.overlay-mf {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+.paralax-mf {
+  position: relative;
+  padding: 8rem 0;
+}
+/* <================ Components ===================> */
+section {
+  padding: 60px 0;
+}
+ul {
+  list-style-type: none;
+}
+
+/* <================ End components ===================> */
+
+/* <================ Navigation bar ===================> */
+.navbar-nav .nav-item {
+  border-bottom: 1px solid transparent;
+}
+.navbar-nav .nav-item:hover {
+  border-bottom: 1px solid white;
+}
+
+.my-brand-highlight {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(0, 183, 255);
+}
+
+.brand-wrench {
+  transform: rotate(45deg);
+  animation: brandWrench 8s infinite;
+}
+
+@keyframes brandWrench {
+  10% {
+    color: yellow;
+    transform: rotate(270deg);
+  }
+  40% {
+    color: rgb(0, 183, 255);
+    transform: rotate(-45deg) scale(0.7);
+  }
+  90% {
+    color: green;
+    transform: rotate(3600deg);
+  }
+}
+
+/* <---------------- End of navigation ------------------> */
+
+/* <================ Hero ===================> */
+.hero-section-container {
+  background: url("/assets/images/hero-bg.jpg") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+.hero-section-container::after {
+  content: " ";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.my-brand-container {
+  color: white;
+  z-index: 10;
+}
+
+.showcase-links-container i {
+  margin-right: 0.625rem;
+  color: white;
+}
+.showcase-links-container i:hover {
+  color: rgb(0, 183, 255);
+}
+
+
+.brand-pencil-write {
+  animation: brandPencilWrite 8s infinite;
+}
+
+@keyframes brandPencilWrite {
+  10% {
+    color: yellow;
+    transform: translateY(-20px);
+  }
+  30% {
+    color: yellow;
+    transform: translateY(2px);
+  }
+  40% {
+    color: rgb(0, 183, 255);
+    transform: translateY(-10px);
+  }
+  60% {
+    color: rgb(0, 183, 255);
+    transform: translateY(1px);
+  }
+  70% {
+    color: red;
+    transform: translateY(-20px);
+  }
+  85% {
+    color: red;
+    transform: translateY(1px);
+  }
+  95% {
+    color: green;
+    transform: translateY(0px);
+  }
+}
+/* <---------------- End of hero ------------------> */
+
+/* <================ Services ================> */
+.service-box {
+  background-color: #fff;
+  padding: 2.5rem 1.3rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  /* box-shadow: 5px 10px 2px rgba(0, 0, 0, 0.1); */
+  cursor: grab;
+}
+
+.service-box:hover .ico-circle {
+  transition: all 500ms ease;
+  color: #fff;
+  background-color: #0078ff;
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.service-box .service-ico {
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+}
+
+.service-box .ico-circle {
+  transition: all 500ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-box .ico-circle i {
+  line-height: 0;
+  font-size: 40px;
+}
+
+/* .service-box .s-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0;
+}
+
+.service-box .s-description {
+  color: #4e4e4e;
+} */
+
+/* <---------------- End of services */
+
+/* <================ My portfolio =================> */
+
+.work-box {
+  margin-bottom: 3rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #fff;
+  /* box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.work-box:hover img {
+  transform: scale(1.3);
+}
+
+.work-img {
+  display: block;
+  overflow: hidden;
+}
+
+.work-img img {
+  transition: all 1s;
+}
+
+.work-content {
+  padding: 2rem 3% 1rem 4%;
+}
+
+.work-content .w-more {
+  color: #4e4e4e;
+  font-size: 0.8rem;
+}
+
+.work-content .w-more .w-ctegory {
+  color: #0078ff;
+}
+
+.work-content .w-like {
+  font-size: 2.5rem;
+  color: #0078ff;
+  float: right;
+}
+
+.work-content .w-like a {
+  color: #0078ff;
+}
+
+.work-content .w-like .num-like {
+  font-size: 0.7rem;
+}
+
+.w-title {
+  font-size: 1.2rem;
+}
+
+
+/* <---------------- End of my portfolio ------------> */
+
+/*--------------------------------------------------------------
+# Counter
+--------------------------------------------------------------*/
+.counter-box {
+  color: #fff;
+  text-align: center;
+}
+
+.ico-circle {
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1.55;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px #0078ff;
+  display: block;
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (max-width: 1024px) {
+  .bg-image {
+    background-attachment: scroll;
+  }
+}
+
+
+@media (min-width: 577px) {
+  .counter-box {
+    margin-bottom: 1.8rem;
+  }
+}
+
+.counter-ico {
+  margin-bottom: 1rem;
+}
+
+.counter-ico .ico-circle {
+  height: 60px;
+  width: 60px;
+  line-height: 1.5;
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.counter-num .counter {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #0078ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #298eff;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*------/ Prelaoder /------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #f2f2f2;
+  border-top: 6px solid #0078ff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
