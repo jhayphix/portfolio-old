@@ -36,6 +36,10 @@
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+    <!-- Tele -->
+
+    <link rel="stylesheet" href="assets/css/tele/intlTelInput.css" />
+
     <link rel="stylesheet" href="assets/styles.css" />
     <title>JhayPhix - Personal Portfolio</title>
   </head>
@@ -112,16 +116,16 @@
           </h2>
 
           <div class="showcase-links-container">
-            <a href="https://wa.link/mkifiu" target="_blank">
+            <a href="https://wa.me/233248359918?text=Hello Jhay, I need your service!!" target="_blank">
               <i class="fab fa-whatsapp fa-2x"></i>
             </a>
-            <a href="https://wa.link/mkifiu" target="_blank">
+            <a href="https://wa.me/233248359918?text=Hello Jhay, I need your service!!"  target="_blank">
               <i class="fab fa-facebook fa-2x"></i>
             </a>
             <a href="https://github.com/jhayphix" target="_blank">
               <i class="fab fa-github fa-2x"></i>
             </a>
-            <a href="https://wa.link/mkifiu" target="_blank">
+            <a href="https://wa.me/233248359918?text=Hello Jhay, I need your service!!"  target="_blank">
               <i class="fab fa-twitter fa-2x"></i>
             </a>
           </div>
@@ -533,79 +537,84 @@
 
               <div class="col">
                 <form>
-                  <label for="email" class="form-label">Email Address: </label>
-                  <div class="input-group mb-4">
-                    <span class="input-group-text bg-primary">
-                      <i class="bi bi-envelope-fill text-light"></i>
-                    </span>
-                    <input
-                      type="email"
-                      id="email"
-                      class="form-control"
-                      placeholder="e.g. jhayphix@gmail.com"
-                    />
-                    <span class="tt input-group-text bg-primary">
-                      <span
-                        class="tt"
-                        data-bs-placement="bottom"
-                        title="Enter an email we can reply to"
-                      >
-                        <i class="bi bi-question-circle text-light"></i>
-                      </span>
-                    </span>
-                  </div>
-    
-                  <label for="name" class="form-label">Name: </label>
-                  <div class="input-group mb-4">
-                    <span class="input-group-text bg-primary">
-                      <i class="bi bi-person-fill text-light"></i>
-                    </span>
+                  <!-- Name -->
+                  <div class="form-floating my-4">
                     <input
                       type="text"
                       id="name"
+                      name="Name"
                       class="form-control"
-                      placeholder="e.g. JhayPhix"
+                      style="border-bottom: 2px solid var(--primary-color)"
+                      placeholder="Name"
+                      required
                     />
-    
-                    <span class="tt input-group-text bg-primary">
-                      <span
-                        class="tt"
-                        data-bs-placement="bottom"
-                        title="Enter your name"
-                      >
-                        <i class="bi bi-question-circle text-light"></i>
-                      </span>
-                    </span>
+                    <label for="name" class="text-muted">Name</label>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="form-floating my-4">
+                    <input
+                      type="email"
+                      id="email"
+                      name="Email"
+                      class="form-control"
+                      style="border-bottom: 2px solid var(--primary-color)"
+                      placeholder="Email"
+                      required
+                    />
+                    <label for="email" class="text-muted">Email</label>
                   </div>
     
-                  <label for="subject" class="form-label"
-                    >What is your question about?</label
-                  >
-                  <div class="input-group">
-                    <span class="input-group-text bg-primary">
-                      <i class="bi bi-chat-right-dots-fill text-light"></i>
-                    </span>
-                    <select class="form-select" name="subject" id="subject">
-                      <option value="business" selected>Business Query</option>
-                      <option value="content">Content Query</option>
-                      <option value="other">Other Query</option>
+                  <!-- Query -->
+                  <div class="my-4">
+                    <select
+                      class="form-select py-3"
+                      name="Gender"
+                      id="gender"
+                      required
+                      style="border-bottom: 2px solid var(--primary-color)"
+                    >
+                      <option selected>--Your Query--</option>
+                      <option>Business Query</option>
+                      <option>Personal Query</option>
+                      <option>Other</option>
                     </select>
                   </div>
     
-                  <div class="form-floating mb-4 mt-5">
-                    <textarea
-                      class="form-control"
-                      name="query"
-                      id="query"
-                      style="height: 140px"
-                      placeholder="Your query..."
-                    ></textarea>
-                    <label for="query">Your query...</label>
+                  <!-- Phone -->
+                  <div class="my-4">
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="Phone"
+                      class="form-control py-3"
+                      required
+                      style="border-bottom: 2px solid var(--primary-color)"
+                      placeholder="Phone / Mobile no."
+                    />
                   </div>
     
-                  <div class="d-grid text-center mb-4">
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                  <!-- Query -->
+                  <div class="form-floating my-4">
+                    <textarea
+                      class="form-control"
+                      name="Comment"
+                      id="comment"
+                      style="height: 140px"
+                      placeholder="Leave me a comment"
+                      required
+                    ></textarea>
+                    <label for="comment">Leave me a comment...</label>
                   </div>
+    
+                  <!-- Submit -->
+                  <a
+                    href="https://wa.me/233546803465?text=Benedict-retype-your-text"
+                    type="submit"
+                    class="btn btn-lg j-btn-primary w-100"
+                  >
+                    Message Me
+                  </a>
                 </form>
               </div>
             </div>
@@ -647,16 +656,16 @@
 
                 <div class="card-footer my-bg-dark text-center border-success">
                   <div class="showcase-links-container">
-                    <a href="https://wa.link/mkifiu" target="_blank">
+                    <a href="https://wa.me/233248359918?text=Hello Jhay, I need your service!!"  target="_blank">
                       <i class="fab fa-whatsapp fa-2x"></i>
                     </a>
-                    <a href="https://wa.link/mkifiu" target="_blank">
+                    <a href="https://wa.me/233248359918?text=Hello Jhay, I need your service!!"  target="_blank">
                       <i class="fab fa-facebook fa-2x"></i>
                     </a>
                     <a href="https://github.com/jhayphix" target="_blank">
                       <i class="fab fa-github fa-2x"></i>
                     </a>
-                    <a href="https://wa.link/mkifiu" target="_blank">
+                    <a href="https://wa.me/233248359918?text=Hello Jhay, I need your service!!"  target="_blank">
                       <i class="fab fa-twitter fa-2x"></i>
                     </a>
                   </div>
@@ -671,7 +680,8 @@
     <!-- ------------------ End contact ------------------ -->
 
     <!-- ================== Footer section ================== -->
-    <footer id="footer-section" class="text-light" style="background-color: #0062d3; padding: 25px 0;">
+    <!-- <footer id="footer-section" class="text-light" style="background-color: #0062d3; padding: 25px 0;"> -->
+    <footer id="footer-section" class="text-light my-bg-dark" style=" padding: 25px 0;">
       <div class="container text-center">
 
         <div class="row">
@@ -690,10 +700,27 @@
     </footer>
     <!-- ------------------ End of footer ------------------ -->
 
-    <!-- <div id="preloader"></div> -->
+    <!-- ========================================== -->
+    <!-- ============                ============== -->
+    <!-- ============  Back to top   ============== -->
+    <!-- ============                ============== -->
+    <!-- ========================================== -->
+    <a
+      id="chat-on-whatsapp"
+      href="https://wa.me/233248359918?text=Hello Jhay, I need your service!!" target="_blank"
+      class="chat-on-whatsapp d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i>
     </a>
 
+    <!-- tel -->
+    <script src="assets/js/tele/intlTelInput.js"></script>
+    <script>
+      const input = document.querySelector("#phone");
+      window.intlTelInput(input, []);
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"

@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #0078ff;
+  --transition: all 500ms ease;
+}
+
 /* <================ Utils ===================> */
 .my-bg-dark {
   background: black;
@@ -9,6 +14,24 @@
 }
 .j-bg-white {
   background-color: #f5f5f5;
+}
+.j-bg-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.j-text-primary {
+  color: var(--primary-color);
+}
+
+.j-btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+.j-btn-primary:hover {
+  background-color: white !important;
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
 }
 /* <================ End utils ===================> */
 
@@ -94,7 +117,6 @@ ul {
   justify-content: center;
   align-items: center;
   position: relative;
-
 }
 .hero-section-container::after {
   content: " ";
@@ -117,7 +139,6 @@ ul {
 .showcase-links-container i:hover {
   color: rgb(0, 183, 255);
 }
-
 
 .brand-pencil-write {
   animation: brandPencilWrite 8s infinite;
@@ -256,7 +277,6 @@ ul {
   font-size: 1.2rem;
 }
 
-
 /* <---------------- End of my portfolio ------------> */
 
 /*--------------------------------------------------------------
@@ -292,7 +312,6 @@ ul {
   }
 }
 
-
 @media (min-width: 577px) {
   .counter-box {
     margin-bottom: 1.8rem;
@@ -318,6 +337,74 @@ ul {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+.chat-on-whatsapp {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+  padding: 2rem;
+  width: 50px;
+  height: 50px;
+
+  position: fixed;
+  right: 15px;
+  bottom: 120px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: all 0.4s;
+  z-index: 996;
+
+  /* Display None */
+  visibility: hidden;
+  opacity: 0;
+}
+.chat-on-whatsapp:hover {
+  background: #f5f5f5;
+}
+.chat-on-whatsapp i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+  animation: chatOnWhatsapp 5s infinite;
+}
+.chat-on-whatsapp:hover i {
+  color: var(--primary-color);
+  transform: rotate(-650deg);
+  transition: var(--transition);
+}
+
+@-webkit-keyframes chatOnWhatsapp {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(360deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes chatOnWhatsapp {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(360deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -343,7 +430,10 @@ ul {
   color: #fff;
 }
 
-.back-to-top.active {
+/* display block */
+
+.back-to-top.active,
+.chat-on-whatsapp.active {
   visibility: visible;
   opacity: 1;
 }
@@ -393,3 +483,5 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+/* Now */
