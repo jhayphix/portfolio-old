@@ -1,0 +1,69 @@
+/* 
+|------------------------------------------------
+| Brand
+|------------------------------------------------
+*/
+.brand_highlight {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(0, 183, 255);
+}
+
+.brand_wrench {
+  transform: rotate(45deg);
+  animation: brandWrench 8s infinite;
+}
+
+.brand_container {
+  color: white;
+  z-index: 10;
+}
+
+.brand-pencil-write {
+  animation: brandPencilWrite 8s infinite;
+}
+
+@keyframes brandWrench {
+  10% {
+    color: yellow;
+    transform: rotate(270deg);
+  }
+  40% {
+    color: rgb(0, 183, 255);
+    transform: rotate(-45deg) scale(0.7);
+  }
+  90% {
+    color: green;
+    transform: rotate(3600deg);
+  }
+}
+
+@keyframes brandPencilWrite {
+  10% {
+    color: yellow;
+    transform: translateY(-20px);
+  }
+  30% {
+    color: yellow;
+    transform: translateY(2px);
+  }
+  40% {
+    color: rgb(0, 183, 255);
+    transform: translateY(-10px);
+  }
+  60% {
+    color: rgb(0, 183, 255);
+    transform: translateY(1px);
+  }
+  70% {
+    color: red;
+    transform: translateY(-20px);
+  }
+  85% {
+    color: red;
+    transform: translateY(1px);
+  }
+  95% {
+    color: green;
+    transform: translateY(0px);
+  }
+}

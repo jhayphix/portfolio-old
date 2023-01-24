@@ -1,110 +1,57 @@
+/* 
+|------------------------------------------------
+| App classes
+|------------------------------------------------
+*/
 :root {
-  --primary-color: #0078ff;
+  /* --primary_color: #0078ff; */
+  --primary_color: rgb(0, 183, 255);
+  --assent_color: #fffbf2;
+  --light_color: #f5f5f5;
   --transition: all 500ms ease;
 }
-
-/* <================ Utils ===================> */
-.my-bg-dark {
-  background: black;
-}
-.j-underline {
-  width: 100px;
-  margin: auto;
-  height: 5px;
-}
-.j-bg-white {
-  background-color: #f5f5f5;
-}
-.j-bg-primary {
-  background: #0078ff;
-  color: white;
+* {
+  box-sizing: border-box;
 }
 
-.j-text-primary {
-  color: #0078ff;
+a {
+  text-decoration: none;
 }
-
-.j-btn-primary {
-  background-color: #0078ff;
-  color: white;
-}
-.j-btn-primary:hover {
-  background-color: white !important;
-  color: var(--primary-color) !important;
-  border: 1px solid var(--primary-color) !important;
-}
-/* <================ End utils ===================> */
-
-.box-shadow,
-.card-blog,
-.work-box,
-.service-box,
-.paralax-mf {
-  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
-}
-.overlay-mf {
-  background-color: #0078ff;
-}
-
-.overlay-mf {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.7;
-}
-.paralax-mf {
-  position: relative;
-  padding: 8rem 0;
-}
-/* <================ Components ===================> */
 section {
   padding: 60px 0;
 }
 ul {
   list-style-type: none;
 }
-
-/* <================ End components ===================> */
-
-/* <================ Navigation bar ===================> */
+body {
+  background-color: var(--assent_color) !important;
+}
+/* 
+|------------------------------------------------
+| Navigation
+|------------------------------------------------
+*/
 .navbar-nav .nav-item {
   border-bottom: 1px solid transparent;
 }
+.navbar-nav .nav-item .nav-link {
+  opacity: 0.6 !important;
+}
 .navbar-nav .nav-item:hover {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--primary_color);
 }
-
-.my-brand-highlight {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: rgb(0, 183, 255);
-}
-
-.brand-wrench {
-  transform: rotate(45deg);
-  animation: brandWrench 8s infinite;
-}
-
-@keyframes brandWrench {
-  10% {
-    color: yellow;
-    transform: rotate(270deg);
-  }
-  40% {
-    color: rgb(0, 183, 255);
-    transform: rotate(-45deg) scale(0.7);
-  }
-  90% {
-    color: green;
-    transform: rotate(3600deg);
-  }
+.navbar-nav .nav-item:hover .nav-link {
+  opacity: 1 !important;
+  color: var(--primary_color) !important;
 }
 
 /* <---------------- End of navigation ------------------> */
 
-/* <================ Hero ===================> */
+/* 
+|------------------------------------------------
+| Hero
+|------------------------------------------------
+*/
 #hero-section {
   background: black;
 }
@@ -127,70 +74,51 @@ ul {
   left: 0;
   bottom: 0;
 }
-.my-brand-container {
-  color: white;
-  z-index: 10;
+
+.showcase-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.showcase-links-container a {
+  font-size: 2rem;
 }
 
 .showcase-links-container i {
-  margin-right: 0.625rem;
   color: white;
+  text-align: center;
 }
 .showcase-links-container i:hover {
   color: rgb(0, 183, 255);
 }
 
-.brand-pencil-write {
-  animation: brandPencilWrite 8s infinite;
-}
-
-@keyframes brandPencilWrite {
-  10% {
-    color: yellow;
-    transform: translateY(-20px);
-  }
-  30% {
-    color: yellow;
-    transform: translateY(2px);
-  }
-  40% {
-    color: rgb(0, 183, 255);
-    transform: translateY(-10px);
-  }
-  60% {
-    color: rgb(0, 183, 255);
-    transform: translateY(1px);
-  }
-  70% {
-    color: red;
-    transform: translateY(-20px);
-  }
-  85% {
-    color: red;
-    transform: translateY(1px);
-  }
-  95% {
-    color: green;
-    transform: translateY(0px);
-  }
-}
 /* <---------------- End of hero ------------------> */
 
-/* <================ Services ================> */
+/* 
+|------------------------------------------------
+| Service
+|------------------------------------------------
+*/
+#services-section {
+  background: url("/assets/images/floating_bubbles.jpg") no-repeat center
+    center/cover;
+}
+
 .service-box {
   background-color: #fff;
   padding: 2.5rem 1.3rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
   text-align: center;
-  /* box-shadow: 5px 10px 2px rgba(0, 0, 0, 0.1); */
   cursor: grab;
 }
 
 .service-box:hover .ico-circle {
   transition: all 500ms ease;
   color: #fff;
-  background-color: #0078ff;
+  background-color: var(--primary_color) !important;
   box-shadow: 0 0 0 10px #cde1f8;
 }
 
@@ -211,19 +139,20 @@ ul {
   font-size: 40px;
 }
 
-/* .service-box .s-title {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  padding: 0.4rem 0;
-}
-
-.service-box .s-description {
-  color: #4e4e4e;
-} */
-
 /* <---------------- End of services */
 
-/* <================ My portfolio =================> */
+/* 
+|------------------------------------------------
+| Portfolio
+|------------------------------------------------
+*/
+#my-portfolio-section {
+  background: linear-gradient(
+    to bottom,
+    var(--assent_color) 10%,
+    var(--light_color) 40%
+  ) !important;
+}
 
 .work-box {
   margin-bottom: 3rem;
@@ -256,17 +185,17 @@ ul {
 }
 
 .work-content .w-more .w-ctegory {
-  color: #0078ff;
+  color: var(--primary_color) !important;
 }
 
 .work-content .w-like {
   font-size: 2.5rem;
-  color: #0078ff;
+  color: var(--primary_color) !important;
   float: right;
 }
 
 .work-content .w-like a {
-  color: #0078ff;
+  color: var(--primary_color) !important;
 }
 
 .work-content .w-like .num-like {
@@ -279,9 +208,11 @@ ul {
 
 /* <---------------- End of my portfolio ------------> */
 
-/*--------------------------------------------------------------
-# Counter
---------------------------------------------------------------*/
+/* 
+|------------------------------------------------
+| Counter
+|------------------------------------------------
+*/
 .counter-box {
   color: #fff;
   text-align: center;
@@ -295,7 +226,7 @@ ul {
   line-height: 1.55;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #0078ff;
+  box-shadow: 0 0 0 10px var(--primary_color) !important;
   display: block;
 }
 
@@ -333,12 +264,17 @@ ul {
   font-size: 2rem;
   margin-bottom: 0;
 }
+/* 
+|------------------------------------------------
+| Contact
+|------------------------------------------------
+*/
 
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .chat-on-whatsapp {
-  background-color: var(--primary-color);
+  background-color: var(--primary_color);
   color: #fff;
   border: 2px solid var(--secondary-color);
   border-radius: 50%;
@@ -368,7 +304,7 @@ ul {
   animation: chatOnWhatsapp 5s infinite;
 }
 .chat-on-whatsapp:hover i {
-  color: var(--primary-color);
+  color: var(--primary_color);
   transform: rotate(-650deg);
   transition: var(--transition);
 }
@@ -412,7 +348,7 @@ ul {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #0078ff;
+  background: var(--primary_color) !important;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -436,52 +372,6 @@ ul {
 .chat-on-whatsapp.active {
   visibility: visible;
   opacity: 1;
-}
-
-/*------/ Prelaoder /------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #f2f2f2;
-  border-top: 6px solid #0078ff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /* Now */
